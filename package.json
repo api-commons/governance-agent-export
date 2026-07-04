@@ -1,0 +1,21 @@
+{
+  "name": "governance-agent-export",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A browser-first tool that exports an API governance ruleset into agent-native artifacts — an AGENTS.md governance block, a system-prompt instruction set, a per-rule remediation prompt pack, and a compact rule digest — so agents follow the rules while authoring, not just after linting.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "data": "node tools/build-rules.mjs"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11"
+  },
+  "dependencies": {
+    "yaml": "^2.6.1"
+  }
+}

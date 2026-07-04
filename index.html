@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agent Rule Export — turn a governance ruleset into agent-native guidance</title>
+    <meta name="description" content="Export an API governance ruleset into agent-native artifacts: an AGENTS.md governance block, a system-prompt instruction set, a per-rule remediation prompt pack, and a compact rule digest — so agents follow the rules while authoring. Runs entirely in your browser." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Google tag (gtag.js) — API Commons -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNSPT4B4S8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WNSPT4B4S8');
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <strong>Agent Rule Export</strong>
+        <span class="tag">agents.apicommons.org</span>
+      </div>
+      <nav>
+        <a href="#" id="nav-about" title="What this exports">About</a>
+        <a href="https://apis.io" target="_blank" rel="noopener">APIs.io</a>
+        <a href="https://apicommons.org" target="_blank" rel="noopener">API Commons</a>
+        <a href="https://github.com/api-commons/governance-agent-export" target="_blank" rel="noopener">GitHub</a>
+        <button id="engage-ae" class="engage-btn" type="button" title="Work with API Evangelist on API governance">Get help</button>
+      </nav>
+    </header>
+
+    <div class="toolbar">
+      <label class="inline">Ruleset
+        <div class="seg" id="src-seg"><button data-src="catalog" class="is-active">API Commons</button><button data-src="custom">Paste your own</button></div>
+      </label>
+      <label class="inline">Format <select id="f-format"></select></label>
+      <label class="inline">Experience <select id="f-exp"><option value="">all</option></select></label>
+      <input type="search" id="f-query" placeholder="Filter rules…" autocomplete="off" />
+      <div class="counts" id="status" aria-live="polite"></div>
+    </div>
+
+    <details class="drawer" id="drawer" hidden>
+      <summary>Paste your Spectral ruleset (YAML / JSON with a <code>rules:</code> map)</summary>
+      <div class="io-grid"><div class="io" style="grid-column:1/-1">
+        <textarea id="ruleset-text" spellcheck="false" placeholder="Paste your .spectral.yaml…"></textarea>
+      </div></div>
+    </details>
+
+    <div class="toolbar" style="border-top:0">
+      <div class="tabs" role="tablist">
+        <button class="tab is-active" data-target="agents" role="tab">AGENTS.md</button>
+        <button class="tab" data-target="system" role="tab">System prompt</button>
+        <button class="tab" data-target="remediation" role="tab">Remediation pack</button>
+        <button class="tab" data-target="digest" role="tab">Rule digest</button>
+      </div>
+    </div>
+
+    <main class="stage">
+      <div class="out-head">
+        <h3 id="out-title">AGENTS.md</h3><span class="desc" id="out-desc"></span>
+        <div class="out-actions">
+          <button class="ghost-btn" id="copy-out" type="button">Copy</button>
+          <button class="measure-btn" id="dl-out" type="button">Download <span class="filename" id="out-file"></span></button>
+        </div>
+      </div>
+      <pre class="output" id="output">Loading the rule catalog…</pre>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
