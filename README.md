@@ -9,12 +9,6 @@ A Spectral ruleset is built to be *executed*. But an AI agent generating an API 
 same rules *before* it acts, as guidance it can read. This tool turns a ruleset into the
 artifacts that do that.
 
-Part of the [API Commons](https://apicommons.org/tools/) tools, alongside
-[API Validator](https://github.com/api-commons/api-validator),
-[API Governance MCP](https://github.com/api-commons/api-governance-mcp),
-[Governance Coverage](https://github.com/api-commons/governance-coverage), and
-[Spectral Ruleset Studio](https://github.com/api-commons/spectral-ruleset-studio).
-
 ## What it exports
 
 | Artifact | What it is |
@@ -56,6 +50,18 @@ tags, and the remediation `prompt`) into the committed
 
 Everything runs client-side. Any ruleset you paste never leaves the page — there is no
 server.
+
+## Part of API Commons
+
+An open, browser-first tool from **[API Commons](https://apicommons.org)** — free, no backend, your data stays in your browser. Browse the full set at **[apicommons.org/tools](https://apicommons.org/tools/)**.
+
+**Related tools**
+- [API Governance MCP](https://github.com/api-commons/api-governance-mcp) — a Spectral MCP server for AI clients
+- [Toolsmith](https://toolsmith.apicommons.org) — forge MCP tools + Agent Skills from OpenAPI
+- [Context Gate](https://contextgate.apicommons.org) — consumer-centric governance for agent context
+- [Spectral Ruleset Studio](https://studio.apicommons.org) — turn a style guide into an owned ruleset
+- [API Validator](https://validator.apicommons.org) — lint OpenAPI/AsyncAPI/Arazzo/JSON Schema in your browser
+- [Governance Coverage](https://coverage.apicommons.org) — how much of your API your rules actually check
 
 ---
 
