@@ -72,3 +72,10 @@ An open, browser-first tool from **[API Commons](https://apicommons.org)** — f
 A project of [API Evangelist](https://apievangelist.com), maintained openly under
 [API Commons](https://apicommons.org). Free to fork; API Evangelist offers expert API
 governance services when you want help. Apache-2.0.
+
+## License
+
+**[Apache-2.0](LICENSE).**
+
+API Commons licenses **code** under Apache-2.0 and **artifacts** — schemas, rulesets,
+examples and API descriptions — under CC BY-NC-SA 4.0.
